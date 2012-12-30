@@ -70,6 +70,7 @@ def get_version_path(value, version_prefix, site=None):
         relative_path = path_strip(os.path.join(path,''), site.directory)
         filename, ext = os.path.splitext(filename)
         version_filename = filename + "_" + version_prefix + ext
+
         if VERSIONS_BASEDIR:
             return os.path.join(VERSIONS_BASEDIR, relative_path, version_filename)
         else:
